@@ -1,5 +1,5 @@
-import type { User } from "@/types";
 import CardDisplay from "./components/CardDisplay";
+import { User } from "@/types/types";
 
 export default async function Home() {
   const userResponse = await fetch(
@@ -7,7 +7,7 @@ export default async function Home() {
   );
   const users: User[] = await userResponse.json();
   return (
-    <main>
+    <main className="text-black">
       <CardDisplay users={users} />
     </main>
   );

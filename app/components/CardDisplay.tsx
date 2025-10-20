@@ -1,6 +1,6 @@
 "use client";
 
-import { User } from "@/types";
+import { User } from "@/types/types";
 import UserCard from "./UserCard";
 
 export default function CardDisplay({ users }: { users: User[] }) {
@@ -11,6 +11,7 @@ export default function CardDisplay({ users }: { users: User[] }) {
           <UserCard key={user.username} user={user} />
         ))}
       </section>
+
       {/* page selection section */}
       <section>
         <div className="flex justify-center gap-2 mt-4">
